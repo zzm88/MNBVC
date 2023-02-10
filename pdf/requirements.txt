@@ -1,0 +1,2 @@
+PyMuPDF
+paddlepaddle-gpu==2.0.2

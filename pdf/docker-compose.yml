@@ -1,0 +1,13 @@
+version: '3'
+services:
+  paddleocr:
+    image: gswyhq/paddleocr:2.3.0
+    container_name: agitated_mahavira
+    command: /bin/bash 
+    volumes:
+      - /Users/ming/Documents/GitHub/MNBVC_myfork/pdf:/app/PaddleOCR
+      - /Users/ming/Documents/GitHub/MNBVC_myfork/pdf/requirements.txt:/app/requirements.txt
+    tty: true
+    stdin_open: true
+    working_dir: /app
+    entrypoint: ['/bin/bash', '-c', 'pip install -r /app/requirements.txt && /bin/bash']
