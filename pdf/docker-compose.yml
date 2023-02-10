@@ -5,9 +5,8 @@ services:
     container_name: agitated_mahavira
     command: /bin/bash 
     volumes:
-      - /Users/ming/Documents/GitHub/MNBVC_myfork/pdf:/app/PaddleOCR
-      - /Users/ming/Documents/GitHub/MNBVC_myfork/pdf/requirements.txt:/app/requirements.txt
+      - ./:/app/PaddleOCR
     tty: true
     stdin_open: true
     working_dir: /app
-    entrypoint: ['/bin/bash', '-c', 'pip install -r /app/requirements.txt && /bin/bash']
+    entrypoint: ['/bin/bash', '-c', 'pip install -r /app/PaddleOCR/requirements.txt && /bin/bash']
